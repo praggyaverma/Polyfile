@@ -126,3 +126,10 @@ h3{
 .login-register-btn:hover {
     background-color: #598c71; 
 }
+
+footer {
+    background-color: #125b50; 
+    color: #eff6f2;
+    text-align: center; 
+    padding: 20px 0; 
+}
