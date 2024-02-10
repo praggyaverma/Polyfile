@@ -110,3 +110,19 @@ h3{
 .social-links a i {
     font-size: 3em; 
 }
+
+/* login reigster button */
+
+.login-register-btn {
+    background-color: #125b50;
+    color:#eff6f2;
+    border: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-register-btn:hover {
+    background-color: #598c71; 
+}

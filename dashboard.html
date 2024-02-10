@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard-style.css">
+    <script src="https://kit.fontawesome.com/20cd1873cf.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+<body>
+
+<!-------------------- Left Sidebar ---------------------->
+<div class="sidebar">
+    <h2>Polyfile Dashboard</h2>
+    <ul>
+        <li><a href="#" id="upload-btn">Upload Files</a></li>
+        <li><a href="#" id="download-btn">Download Files</a></li>
+        <li><a href="#" id="share-btn">Share Files</a></li>
+    </ul>
+</div>
+
+<!---------------------- Page Content ---------------------->
+<div class="content">
+    <h1>Welcome to Polyfile Dashboard</h1>
+    <div class="upload-section">
+        <h2>Upload Files</h2>
+        <input type="file" id="file-input">
+        <button id="upload-btn">Upload</button>
+    </div>
+    <div class="download-section" style="display: none;">
+        <h2>Download Files</h2>
+        <ul>
+            <li><a href="images/logo.png" download>Sample file-1</a></li>
+            <li><a href="images/logo.png" download>Sample file-2</a></li>
+        </ul>
+    </div>
+    <div class="share-section" style="display: none;">
+        <h2>Share Files</h2>
+        <ul>
+            <p>With Polyfile's secure and decentralized sharing, only those with token will be able to see your file.<br>Feature Coming Soon!</p>
+        </ul>
+    </div>
+</div>
+
+<!---------------------- JS Code ---------------------->
+
+<script>
+const uploadBtn = document.getElementById('upload-btn');
+const downloadBtn = document.getElementById('download-btn');
+const shareBtn = document.getElementById('share-btn');
+
+const uploadSection = document.querySelector('.upload-section');
+const downloadSection = document.querySelector('.download-section');
+const shareSection = document.querySelector('.share-section');
+
+uploadBtn.addEventListener('click', function() {
+    uploadSection.style.display = 'block';
+    downloadSection.style.display = 'none';
+    shareSection.style.display = 'none';
+});
+
+downloadBtn.addEventListener('click', function() {
+    downloadSection.style.display = 'block';
+    uploadSection.style.display = 'none';
+    shareSection.style.display = 'none';
+});
+
+shareBtn.addEventListener('click', function() {
+    shareSection.style.display = 'block';
+    uploadSection.style.display = 'none';
+    downloadSection.style.display = 'none';
+});
+</script>
+
+</body>
+</html>
